@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <CalendarApp />
-  </React.StrictMode>,
+  // </React.StrictMode>,
 )
