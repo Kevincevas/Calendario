@@ -5,5 +5,9 @@ import { uiSlice, calendarSlice } from "./";
     reducer: {
         ui: uiSlice.reducer,
         calendar: calendarSlice.reducer
-    }
+    },
+    //solucionar problemas de las fechas
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+        serializableCheck: false
+    })
  })
