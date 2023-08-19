@@ -23,8 +23,8 @@ const customStyles = {
 };
 Modal.setAppElement('#root');
 
-export const CalendarModal = () => {
-
+export const CalendarModal = (event) => {
+    
     const { isDateModalOpen, closeDateModal }= useUiStore();
     const { activeEvent, startSavingEvent } = useCalendarStore();
 
@@ -36,6 +36,7 @@ export const CalendarModal = () => {
         start: new Date(),
         end: addHours( new Date(), 2 ), //añadiendo dos horas a la fecha actual
     });
+
 
     //memorizando los valores si el title o formSubmitted cambian
     const titleClass = useMemo(() => {
@@ -104,6 +105,8 @@ export const CalendarModal = () => {
         closeDateModal();
         setFormSubmitted(false);
     }
+
+    
 
     return (
         <Modal
@@ -185,6 +188,7 @@ export const CalendarModal = () => {
                 >
                     <i className="far fa-save"></i>
                     <span> Guardar</span>
+                    
                 </button>
 
             </form>
