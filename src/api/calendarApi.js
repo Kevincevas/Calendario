@@ -8,7 +8,7 @@ const calendarApi = axios.create({
     baseURL: VITE_API_URL
 });
 
-// ToDo: configurar interceptores
+
 //cualquier peticion que se haga, se coloca en el header, para verificarla autenticacion del usuario
 calendarApi.interceptors.request.use( config => {
 
